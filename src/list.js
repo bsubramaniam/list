@@ -292,6 +292,7 @@ var List = function(id, options, values) {
     * defaults to undefined which means "all".
     */
     this.search = function(searchString, columns) {
+        if(!self.size()) return;
         self.i = 1; // Reset paging
         var matching = [],
             found,
